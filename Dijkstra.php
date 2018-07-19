@@ -88,6 +88,10 @@ class Edge {
 	}
 }
 
+function compareWeights($a, $b) {
+	return $a->data[0] - $b->data[0];
+}
+
 class Graph {
 	
 	public $nodes = array();
