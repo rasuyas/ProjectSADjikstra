@@ -73,3 +73,28 @@ class PriorityQueue {
 		return $x;
 	}
 }
+<?php
+
+class Edge {
+	
+	public $start;
+	public $end;
+	public $weight;
+	
+	public function __construct($start, $end, $weight) {
+		$this->start = $start;
+		$this->end = $end;
+		$this->weight = $weight;
+	}
+}
+
+class Graph {
+	
+	public $nodes = array();
+	
+	public function addedge($start, $end, $weight = 0) {
+		if (!isset($this->nodes[$start])) {
+			$this->nodes[$start] = array();
+		}
+		array_push($this->nodes[$start], new Edge($start, $end, $weight));
+	}
