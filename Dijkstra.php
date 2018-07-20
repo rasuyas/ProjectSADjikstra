@@ -73,7 +73,6 @@ class PriorityQueue {
 		return $x;
 	}
 }
-<?php
 
 class Edge {
 	
